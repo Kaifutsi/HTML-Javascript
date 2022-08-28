@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 3px groove rgb(239, 64, 0);
+          border-collapse: collapse;
+          font-size: 20px;
+          background-color: rgb(248, 229, 198);
+          box-shadow: 5px 5px 10px rgb(183, 183, 183);
+          padding: 10px;
+        }
+
+        h1{
+            color: rgb(227, 76, 6);
+            text-shadow: 5px 5px 10px rgb(199, 199, 199);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Pizzalaskuri</h1>
+    <table style="width: 50%; ">
+        <tbody>
+            <form id="pizzakoko" name="pizzaKoko">
+                <div class="form-group">
+                <tr>
+                    <td>Valitse koko: </td>
+                    <td><input type="radio" id="normaali" name="koko" value="5" onchange="radio()">Normaali 5 eur</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="radio" id="perhe" name="koko" value="7" onchange="radio()">Perhe 7 eur</td>
+                </tr>
+                </div>
+                <div class="form-group">
+                <tr>  
+                    <td>Valitse täytteet:</td>
+                    <td><input type="checkbox" name="taytteet" value="kinkku" id="chkb1" onchange="checkb1()">Kinkku 0,70 eur</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="checkbox" name="taytteet" value="ananas" id="chkb2" onchange="checkb2()">Ananas 0,60 eur</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="checkbox" name="taytteet" value="tonnikala" id="chkb3" onchange="checkb3()">Tonnikala 0,50 eur</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="checkbox" name="taytteet" value="herkkusieni"id="chkb4" onchange="checkb4()">Herkkusieni 0,70 eur</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="checkbox" name="taytteet" value="oliivi" id="chkb5" onchange="checkb5()">Oliivi 0,50 eur</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="checkbox" name="taytteet" value="lisäjuusto" id="chkb6" onchange="checkb6()">Lisäjuusto 0,70 eur</td>
+                </tr>
+                </div>
+            <tr>
+                <td>Pizzan hinta:</td>
+                <td>
+                    <textarea type="text" style="height: 25px; width: 250px; " id="hintaPizza" name="pizzahin" value=""></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Määrä:</td>
+                <td>
+                    <input type="number" style="height: 25px; width: 50px;" name="MaaraP" id="MaaraPiz" value="0" min="0">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" style="height: 25px; width: 250px; " value="" id="yht" name="lisa" hidden></td>
+                <td><button type="submit" style="height: 30px; width: 100px; background-color: rgb(241, 65, 1); border-radius: 5px; border-color: rgb(221, 28, 2); font-size: 20px;">Tilaa</button></td>
+            </tr>
+        </form>
+            <tr>
+                <td style="vertical-align: bottom;">Tilatut pizzat:</td>
+                <td><textarea id="responses" style="width: 500px; height: 200px;" name="tilP" value=""></textarea></td>
+            </tr>
+            <tr>
+                <td>Yhteensä:</td>
+                <td><textarea id="yhteensa" type="text" style="height: 25px; width: 250px;" name="yhtP" value=""></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
